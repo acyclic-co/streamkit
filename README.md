@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Streamkit is a library and a CLI tool to handle multiple streams.
+Streamkit is a library and a CLI tool to stream data from API endpoints which does not support event streams.
 
 ```shell
 > stream login
@@ -13,6 +13,16 @@ You have succesfully connected.
 > stream quota
 You can stream 11233 events more this month.
 ```
+
+## Commands
+
+* login
+* logout
+* new: Create a new stream
+* ls: List all your available streams
+* remove: Remove stream
+* info: Get stream details
+* quota: Get your available quota
 
 ## Use cases
 
@@ -30,17 +40,14 @@ Available streams:
 Using stream: 45745c60-7b1a-11e8-9c9c-2d42b21b1a3e
 Endpoint: https://streamkit.io/45745c60-7b1a-11e8-9c9c-2d42b21b1a3e
 
-> stream set polling https://blockchain.info/ticker
+> stream add polling ticker https://blockchain.info/ticker
 Done!
 
 > stream info 45745c60-7b1a-11e8-9c9c-2d42b21b1a3e
 Stream created on February 12th 2019
 Endpoint: https://streamkit.io/45745c60-7b1a-11e8-9c9c-2d42b21b1a3e
 API token: ******
-Polling data from: https://blockchain.info/ticker
+* Pipeline 'ticker': Polling data from https://blockchain.info/ticker
 ```
-
-
-
 
 
