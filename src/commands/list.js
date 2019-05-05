@@ -18,18 +18,16 @@ module.exports = (args) => {
     .then(success => {
       spinner.succeed();
 
-      const table = new Table({
-        head: [ 'Stream', 'Endpoint', 'Remote endpoint', 'Type', 'Created at' ]
-      });
       success.data.streams.forEach(stream => {
         const createdAt = new Date(stream.createdAt);
-        table.push([ stream.name,
-                     `${HOST}/stream/${stream.id}/events`,
-                     stream.endpoint,
-                     stream.stream_type,
-                     createdAt.toLocaleString() ]);
+        const table = new Table();
+        
+        table.push({ 'Stream' :  stream.name },
+                   { 'Host' : `${HOST}/stream/${stream.id}/events` },
+                   { 'Endpoint': stream.endpoint });
+        
+        console.log(table.toString());
       });
-      console.log(table.toString());
     })
     .catch(error => {
       spinner.fail(chalk.red(getError(error)));
