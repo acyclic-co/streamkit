@@ -7,6 +7,7 @@ const events = require('./commands/events');
 const list = require('./commands/list');
 const remove = require('./commands/remove');
 const quota = require('./commands/quota');
+const token = require('./commands/token');
 
 program.version('0.1.0');
 
@@ -33,5 +34,8 @@ program.command('remove')
 
 program.command('quota')
        .action(quota);
+
+program.command('token')
+       .action(token);
 
 program.parse(process.argv);
