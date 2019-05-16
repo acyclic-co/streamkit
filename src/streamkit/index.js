@@ -47,6 +47,17 @@ module.exports = {
       return Promise.reject(error);
     }      
   },
+  
+  addEndpoint: (id, endpoint, headers) => {
+    try {
+      return axios.put(`${HOST}/stream/${id}`,
+                        { endpoint: endpoint,
+                          headers: JSON.stringify(typeof(headers) === 'string' ? [headers] : headers) },
+                        getHeaders());
+    } catch(error) {
+      return Promise.reject(error);
+    }      
+  },
 
   getStreams: () => {
     try {
