@@ -15,7 +15,7 @@ program.command('login').action(login);
 program.command('logout').action(logout);
 
 program.command('new')
-        .argument('<name>', 'Stream name')
+       .argument('<name>', 'Stream name')
        .argument('<endpoint>', 'Remote URL endpoint to stream out')
        .argument('[frequency]', 'Polling frequency', program.INT)
        .option('--header <header>', 'HTTP headers to include in each remote request', program.REPEATEABLE)
@@ -25,7 +25,7 @@ program.command('list')
        .action(list);
 
 program.command('events')
-       .argument('<name>', 'Stream name')
+       .argument('[streams...]', 'Stream names')
        .action(events);
 
 program.command('remove')
