@@ -1,7 +1,7 @@
 {
-  "name": "streamkit",
+  "name": "streamkit-cli",
   "version": "0.0.1",
-  "repository": "https://github.com/acyclic-co/streamkit.git",
+  "repository": "https://github.com/acyclic-co/streamkit-cli.git",
   "author": "Juan Fernández <juan@acyclic.co>",
   "scripts": {
     "test": "node_modules/.bin/mocha"
