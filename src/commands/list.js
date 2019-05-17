@@ -21,12 +21,10 @@ module.exports = (args) => {
       success.data.streams.forEach(stream => {
         const createdAt = new Date(stream.createdAt);
         const table = new Table();
-        const endpoints = new Table();
-        stream.endpoints.forEach(endpoint => endpoints.push([ endpoint ]));
         
         table.push({ 'Stream' :  stream.name },
                    { 'Host' : `${HOST}/stream/${stream.id}/events` },
-                   { 'Endpoints': endpoints.toString() });
+                   { 'Endpoint': stream.endpoint });
         
         console.log(table.toString());
       });
