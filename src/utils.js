@@ -8,6 +8,8 @@ module.exports = {
         return 'This element already exists.';
       case 401:
         return 'You need a valid account first. Use "login" command to start a session.';
+      case 404:
+        return 'Element not found';
       case 406:
         return 'Invalid parameters.';
       default:

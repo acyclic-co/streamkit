@@ -72,9 +72,10 @@ module.exports = {
     }
   },
 
-  getEvents: (id, onData) => {
+  getEvents: (streams, onData) => {
     try {
-      return axios.get(`${HOST}/stream/${id}/events`, { ...getHeaders(), responseType: 'stream' });
+      const query = streams.map(name => `stream=${name}`).join('&');
+      return axios.get(`${HOST}/events?${query}`, { ...getHeaders(), responseType: 'stream' });
     } catch(error) {
       return Promise.reject(error);
     }    
