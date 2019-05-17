@@ -24,7 +24,7 @@ For this month you have consumed 67 requests from a total of 10000
 * list: List all your available streams
 * remove: Remove stream
 * quota: Get your available quota
-* events: Read events from a stream
+* events: Read events from multiple streams
 * token: Show your API authorization token
 
 ## Use cases
@@ -47,12 +47,12 @@ For this month you have consumed 67 requests from a total of 10000
 
 > stream events ticker
 ✔ Connecting to the stream
-{
-  "USD" : {"15m" : 6969.2, "last" : 6969.2, "buy" : 6969.2, "sell" : 6969.2, "symbol" : "$"},
-  "AUD" : {"15m" : 9954.81, "last" : 9954.81, "buy" : 9954.81, "sell" : 9954.81, "symbol" : "$"},
-  "BRL" : {"15m" : 27585.84, "last" : 27585.84, "buy" : 27585.84, "sell" : 27585.84, "symbol" : "R$"},
-  "CAD" : {"15m" : 9353.75, "last" : 9353.75, "buy" : 9353.75, "sell" : 9353.75, "symbol" : "$"},
-  "CHF" : {"15m" : 7050.74, "last" : 7050.74, "buy" : 7050.74, "sell" : 7050.74, "symbol" : "CHF"},
+{ "ticker": {
+    "USD" : {"15m" : 6969.2, "last" : 6969.2, "buy" : 6969.2, "sell" : 6969.2, "symbol" : "$"},
+    "AUD" : {"15m" : 9954.81, "last" : 9954.81, "buy" : 9954.81, "sell" : 9954.81, "symbol" : "$"},
+    "BRL" : {"15m" : 27585.84, "last" : 27585.84, "buy" : 27585.84, "sell" : 27585.84, "symbol" : "R$"},
+    "CAD" : {"15m" : 9353.75, "last" : 9353.75, "buy" : 9353.75, "sell" : 9353.75, "symbol" : "$"},
+    "CHF" : {"15m" : 7050.74, "last" : 7050.74, "buy" : 7050.74, "sell" : 7050.74, "symbol" : "CHF"},
 ...
 
 > stream token
