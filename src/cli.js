@@ -9,7 +9,7 @@ const remove = require('./commands/remove');
 const quota = require('./commands/quota');
 const token = require('./commands/token');
 
-program.version('0.1.0');
+program.version('0.0.2');
 
 program.command('login').action(login);
 program.command('logout').action(logout);
