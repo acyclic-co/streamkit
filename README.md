@@ -1,20 +1,28 @@
 # Streamkit
 
-## Introduction
-
 Streamkit is a library and a CLI tool to stream data from API endpoints which does not support event streams.
 
 ```shell
-> stream login
+$ stream login
 If you don't have an account, go to https://streamkit.io to sign in
 ? Username or email user@test.com
 ? Password ****
 ✔ Done!
 
-> stream quota
+$ stream quota
 ✔ Connecting to streamkit.io
 For this month you have consumed 67 requests from a total of 10000
 ```
+
+## Installation
+
+Using npm:
+```shell
+$ npm i -g streamkit-cli
+````
+
+Note: You will need to create an account in [streamkit.io](https://streamkit.io)
+
 
 ## Commands
 
@@ -32,10 +40,10 @@ For this month you have consumed 67 requests from a total of 10000
 ### Stream exchanges rate
 
 ```shell
-> stream new ticker https://blockchain.info/ticker
+$ stream new ticker https://blockchain.info/ticker
 ✔ New stream created with id: ae3320dc-2f49-4dff-b002-5f6df6fa0826
 
-> stream list
+$ stream list
 ✔ Listing your streams
 ┌──────────┬─────────────────────────────────────────────────────────────────────────────────┐
 │ Stream   │ ticker                                                                          │
@@ -45,7 +53,7 @@ For this month you have consumed 67 requests from a total of 10000
 │ Endpoint │ https://blockchain.info/ticker                                                  │
 └──────────┴─────────────────────────────────────────────────────────────────────────────────┘
 
-> stream events ticker
+$ stream events ticker
 ✔ Connecting to the stream
 { "ticker": {
     "USD" : {"15m" : 6969.2, "last" : 6969.2, "buy" : 6969.2, "sell" : 6969.2, "symbol" : "$"},
@@ -55,7 +63,7 @@ For this month you have consumed 67 requests from a total of 10000
     "CHF" : {"15m" : 7050.74, "last" : 7050.74, "buy" : 7050.74, "sell" : 7050.74, "symbol" : "CHF"},
 ...
 
-> stream token
+$ stream token
 API Authorization Bearer: eyJ...
 ```
 
