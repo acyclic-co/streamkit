@@ -23,7 +23,7 @@ module.exports = (args) => {
         const table = new Table();
         
         table.push({ 'Stream' :  stream.name },
-                   { 'Host' : `${HOST}/stream/${stream.id}/events` },
+                   { 'URL' : `${HOST}/events?stream=${stream.name}` },
                    { 'Endpoint': stream.endpoint });
         
         console.log(table.toString());
