@@ -3,13 +3,13 @@
 Streamkit is a library and a CLI tool to stream data from API endpoints which does not support event streams.
 
 ```shell
-$ stream login
+$ streamkit login
 If you don't have an account, go to https://streamkit.io to sign in
 ? Username or email user@test.com
 ? Password ****
 ✔ Done!
 
-$ stream quota
+$ streamkit quota
 ✔ Connecting to streamkit.io
 For this month you have consumed 67 requests from a total of 10000
 ```
@@ -40,10 +40,10 @@ Note: You will need to create an account in [streamkit.io](https://streamkit.io)
 ### Stream exchanges rate
 
 ```shell
-$ stream new ticker https://blockchain.info/ticker
+$ streamkit new ticker https://blockchain.info/ticker
 ✔ New stream created with id: ae3320dc-2f49-4dff-b002-5f6df6fa0826
 
-$ stream list
+$ streamkit list
 ✔ Listing your streams
 ┌──────────┬─────────────────────────────────────────────────────────────────────────────────┐
 │ Stream   │ ticker                                                                          │
@@ -53,7 +53,7 @@ $ stream list
 │ Endpoint │ https://blockchain.info/ticker                                                  │
 └──────────┴─────────────────────────────────────────────────────────────────────────────────┘
 
-$ stream events ticker
+$ streamkit events ticker
 ✔ Connecting to the stream
 { "ticker": {
     "USD" : {"15m" : 6969.2, "last" : 6969.2, "buy" : 6969.2, "sell" : 6969.2, "symbol" : "$"},
@@ -63,7 +63,7 @@ $ stream events ticker
     "CHF" : {"15m" : 7050.74, "last" : 7050.74, "buy" : 7050.74, "sell" : 7050.74, "symbol" : "CHF"},
 ...
 
-$ stream token
+$ streamkit token
 API Authorization Bearer: eyJ...
 ```
 
