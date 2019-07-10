@@ -1,6 +1,4 @@
 const axios = require('axios');
-const http = require('http');
-const chalk = require('chalk');
 const fs = require('fs');
 const os = require('os');
 
